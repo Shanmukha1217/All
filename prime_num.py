@@ -6,7 +6,7 @@ def main() :
     if is_prime(num) :
         print(f'{num} is prime.')
     else :
-        print(f'{num} is n0t prime.')
+        print(f'{num} is not prime.')
 
 
 def is_prime(num:int)->bool :
