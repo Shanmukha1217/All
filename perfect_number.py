@@ -1,6 +1,6 @@
-
+import common as c
 def main():
-    num = int(input('Enter the number: '))
+    num = c.read('Enter the number: ')
     if is_perfect(num):
         print(f'{num} is a perfect number')
     else:
@@ -17,7 +17,7 @@ def result(num):
     sum = 0
     for n in range(1, num):
         if num % n == 0:
-            sum += n
+            sum = c.add(sum, n)
     return sum 
 
 
