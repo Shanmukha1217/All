@@ -1,7 +1,7 @@
 import amstrong_number
 
 
-def amstrong_series() :
+def main() :
     num = int(input('Enter the number of amstrong numbers: '))
     count = 0
     n = 1
@@ -11,5 +11,5 @@ def amstrong_series() :
             count += 1
         n += 1
 
-
-amstrong_series()
+if __name__ == "__main__":
+    main()
