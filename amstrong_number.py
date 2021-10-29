@@ -1,3 +1,5 @@
+import common as c
+
 def main():
     num = int(input('enter a num: '))
     if is_amstrong(num):
@@ -14,8 +16,8 @@ def is_amstrong(num:int)-> bool:
 def no_of_digits(num:int)->int:
     count = 0
     while num:
-        num = truncate(num, 10)
-        count = add(count, 1)
+        num = c.num_truncate(num)
+        count = c.add(count, 1)
     return count
 
 
@@ -23,19 +25,11 @@ def result(num:int)-> int:
     temp = num
     res = 0
     while temp:
-        last_digit = retrieve(temp, 10)
-        res =add(res, (last_digit ** no_of_digits(num)))
-        temp = truncate(temp, 10)
+        last_digit = c.digit_retriever(temp)
+        res =c.add(res, (last_digit ** no_of_digits(num)))
+        temp = c.num_truncate(temp)
     return res
 
-def add(num1, num2):
-    return num1 + num2
 
-def retrieve(num1, num2):
-    return num1 % num2
-
-def truncate(num1, num2):
-    return num1 // num2
-
-
-
+if __name__ == "__main__":
+    main()
